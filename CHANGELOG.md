@@ -20,6 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Migrated the help target to a separate repo.
 ### Changed
+- Fixed possible bug in regex where '_' character was escaped '\_' which causes a
+  warning on Ubuntu test host.
 ### Deprecated
 ### Fixed
 ### Security

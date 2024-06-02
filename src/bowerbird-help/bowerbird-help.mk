@@ -3,7 +3,7 @@
 ## Provides this help message
 help:
 	@echo "Available targets:"
-	@awk '/^[a-zA-Z\-\_0-9%:\\]+/ { \
+	@awk '/^[a-zA-Z\-_0-9%:\\]+/ { \
 		helpMessage = match(lastLine, /^## (.*)/); \
 		if (helpMessage) { \
 			helpCommand = $$1; \
