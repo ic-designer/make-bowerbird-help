@@ -15,7 +15,6 @@ WORKDIR_DEPS = $(WORKDIR_ROOT)/deps
 # Includes
 include make/deps.mk
 include bowerbird.mk
-include test/bowerbird-help/test-help-message.mk
 
  # Targets
 .NOTPARALLEL: private_clean
@@ -27,6 +26,4 @@ private_clean:
 	@echo "INFO: Cleaning complete."
 	@echo
 
-.PHONY: private_test
-private_test: \
-		test-help-message \
+$(eval $(call bowerbird::generate-test-runner,private_test,test/,test*.mk))
