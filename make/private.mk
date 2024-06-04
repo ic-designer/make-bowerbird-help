@@ -1,19 +1,22 @@
 # Config
 .SUFFIXES:
 MAKEFLAGS += --no-builtin-rules
+MAKEFLAGS += --no-builtin-variables
 MAKEFLAGS += --no-print-directory
+MAKEFLAGS += --jobs
 
 # Constants
 NAME ?= $(error ERROR: Undefined variable NAME)
 VERSION ?= $(error ERROR: Undefined variable VERSION)
 WORKDIR_ROOT ?= $(error ERROR: Undefined variable WORKDIR_ROOT)
-override WORKDIR_TEST = $(WORKDIR_ROOT)/test/$(NAME)/$(VERSION)
+WORKDIR_TEST = $(WORKDIR_ROOT)/test/$(NAME)/$(VERSION)
 
 # Includes
 include bowerbird.mk
 include test/bowerbird-help/test-help-message.mk
 
  # Targets
+.NOTPARALLEL: private_clean
 .PHONY: private_clean
 private_clean:
 	@echo "INFO: Cleaning directories:"
