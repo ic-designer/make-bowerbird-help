@@ -1,6 +1,5 @@
 # Constants
 .DEFAULT_GOAL := help
-
 NAME := boxerbird-help
 VERSION := $(shell git describe --always --dirty --broken 2> /dev/null)
 WORKDIR_ROOT := $(CURDIR)/.make
