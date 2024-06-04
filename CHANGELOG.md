@@ -22,6 +22,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Fixed possible bug in regex where '_' character was escaped '\_' which causes a
   warning on Ubuntu test host.
+- Added bowerbird dependencies for githooks and test.
+- Migrate test-runner over to bowerbird-test
+- Updated the makefile settings to disable both builtin rules and variables, enable
+  parallel execution of jobs, and to disable paralle operation of `private_clean`.
 ### Deprecated
 ### Fixed
 ### Security
