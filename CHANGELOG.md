@@ -15,17 +15,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 ```
 
-## [Unreleased] - YYYY-MM-DD
+## [0.1.0] - 2024-06-07
 
 ### Added
 - Migrated the help target to a separate repo.
+- Added a description of the help tags to the README.
 ### Changed
-- Fixed possible bug in regex where '_' character was escaped '\_' which causes a
-  warning on Ubuntu test host.
 - Added bowerbird dependencies for githooks and test.
 - Migrate test-runner over to bowerbird-test
 - Updated the makefile settings to disable both builtin rules and variables, enable
   parallel execution of jobs, and to disable paralle operation of `private_clean`.
-### Deprecated
 ### Fixed
-### Security
+- Fixed possible bug in regex where '_' character was escaped '\_' which causes a
+  warning on Ubuntu test host.
